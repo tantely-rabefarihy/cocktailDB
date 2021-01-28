@@ -17,7 +17,7 @@ function App() {
         <Route path="/about">
           <About />
         </Route>
-        <Route path="/cocktail/:id">
+        <Route path="/cocktail/:drinkId">
           <SingleCocktail />
         </Route>
         <Route path="*">
