@@ -18,13 +18,11 @@ const AppProvider = ({ children }) => {
     try {
       const result = await fetch(`${url}${searchTerm}`);
       const data = await result.json();
-      console.log(data);
       if (data?.drinks) {
         const newCocktails = data.drinks.map((item) => {
           //   const ingredients = item.filter((prop) => {
           //     return prop.hasOwnProperty("ingredient");
           //   });
-
           //   console.log(ingredients);
 
           return {
@@ -34,7 +32,6 @@ const AppProvider = ({ children }) => {
             glass: item.strGlass,
             instructions: item.strInstructions,
             alcoholic: item.strAlcoholic,
-            // ingredients: ingredients,
           };
         });
         setCocktails(newCocktails);
