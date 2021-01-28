@@ -3,8 +3,13 @@
 Variables 
 ======
 */
+
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap");
+
 :root {
-  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap");
+  /* @import url(); */
+
   --primaryLightColor: #d4e6a5;
   --primaryColor: #476a2e;
   --primaryDarkColor: #c02c03;
@@ -18,13 +23,14 @@ Variables
   --mainRed: #bd0303;
   --mainTransition: all 0.3s linear;
   --mainSpacing: 0.3rem;
-  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --lightShadow: 1px 3px 5px 3px rgba(0, 0, 0, 0.3);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
   --mainBorderRadius: 0.25rem;
   --smallWidth: 85vw;
   --maxWidth: 40rem;
   --fullWidth: 1170px;
   --fontTheme: "Roboto", sans-serif;
+  --titleFont: "Bungee Shade", cursive;
 }
 /* 
 ====== 
@@ -45,13 +51,18 @@ body {
   font-size: 1rem;
   font-weight: 300;
 }
-h1,
+
+h1 {
+  font-family: var(--titleFont);
+}
+
 h2,
 h3,
 h4,
 h5,
 h6 {
   font-family: var(--fontTheme);
+  font-weight: 400;
   margin-bottom: 1.25rem;
   letter-spacing: var(--mainSpacing);
 }
@@ -61,6 +72,7 @@ p {
 ul {
   list-style-type: none;
 }
+
 a {
   text-decoration: none;
   color: var(--mainBlack);
@@ -137,7 +149,7 @@ Navbar
   height: 5rem;
   display: flex;
   align-items: center;
-  border-bottom: 2px solid var(--primaryColor);
+  border-bottom: 1px solid var(--primaryColor);
   box-shadow: var(--lightShadow);
 }
 .nav-center {
@@ -167,7 +179,7 @@ Navbar
   color: var(--primaryColor);
 }
 .logo {
-  width: 12rem;
+  width: 20rem;
 }
 /* 
 ====== 

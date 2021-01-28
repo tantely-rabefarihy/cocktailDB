@@ -1,14 +1,15 @@
 import React from "react";
-import Loading from "../components/Loading";
-import { useParams, Link } from "react-router-dom";
-const url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
+import CocktailList from "../components/CocktailList";
+import SearchForm from "../components/SearchForm";
 
-const SingleCocktail = () => {
+const Home = () => {
   return (
-    <div>
-      <h2 style={{ fontWeight: 100 }}>single cocktail page </h2>
-    </div>
+    <main>
+      <h2>Homepage</h2>
+      <SearchForm />
+      <CocktailList />
+    </main>
   );
 };
 
-export default SingleCocktail;
+export default Home;
