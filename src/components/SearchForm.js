@@ -7,6 +7,7 @@ const SearchForm = () => {
   return (
     <div>
       <h2>search form component</h2>
+      <input type="text" onChange={(e) => setSearchTerm(e.target.value)} />
     </div>
   );
 };

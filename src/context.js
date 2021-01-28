@@ -21,6 +21,12 @@ const AppProvider = ({ children }) => {
       console.log(data);
       if (data?.drinks) {
         const newCocktails = data.drinks.map((item) => {
+          //   const ingredients = item.filter((prop) => {
+          //     return prop.hasOwnProperty("ingredient");
+          //   });
+
+          //   console.log(ingredients);
+
           return {
             id: item.idDrink,
             name: item.strDrink,
@@ -28,6 +34,7 @@ const AppProvider = ({ children }) => {
             glass: item.strGlass,
             instructions: item.strInstructions,
             alcoholic: item.strAlcoholic,
+            // ingredients: ingredients,
           };
         });
         setCocktails(newCocktails);

@@ -21,15 +21,16 @@ const CocktailList = () => {
       <div className="section">
         <h2 className="section-title">Cocktail List component</h2>
         <div className="cocktails-center">
-          {cocktails.map((drink, key) => {
+          {cocktails.map((drink, index) => {
             return (
-              <div>
-                <p>{drink.name}</p>
-                <img src={drink.pic} />
-                <p>Type of Glass: {drink.glass}</p>
-                <p>Instructions: {drink.instructions}</p>
-                <p>Beverage type: {drink.alcoholic}</p>
-              </div>
+              <Cocktail
+                key={index}
+                drink={drink.name}
+                pic={drink.pic}
+                instructions={drink.instructions}
+                glass={drink.glass}
+                type={drink.alcoholic}
+              />
             );
           })}
         </div>
