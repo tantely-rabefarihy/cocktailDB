@@ -61,12 +61,6 @@ const SingleCocktail = () => {
           <p>
             <span className="drink-data">name :</span> {cocktailData.drink}
           </p>
-          {/* <p>
-              <span className='drink-data'>category :</span> {category}
-            </p> */}
-          {/* <p>
-              <span className='drink-data'>info :</span> {info}
-            </p> */}
           <p>
             <span className="drink-data">glass :</span> {cocktailData.glass}
           </p>

@@ -10,12 +10,12 @@ Variables
 :root {
   /* @import url(); */
 
-  --primaryLightColor: #d4e6a5;
-  --primaryColor: #476a2e;
+  --primaryLightColor: #dddddd;
+  --primaryColor: #333333;
   --primaryDarkColor: #c02c03;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
-  --mainBackground: #f1f5f8;
+  --mainBackground: #363131;
   --mainOverlay: rgba(35, 10, 36, 0.4);
   --mainBlack: #222;
   --mainGrey: #ececec;
@@ -167,18 +167,35 @@ Navbar
 .nav-links a {
   text-transform: capitalize;
   display: inline-block;
-  font-weight: bold;
+  font-weight: 100;
   margin-right: 0.5rem;
-  font-weight: 400;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   font-size: 1.2rem;
   padding: 0.25rem 0.5rem;
   transition: var(--mainTransition);
+  position: relative;
 }
-.nav-links a:hover {
+
+.nav-links a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: rgb(3, 3, 3);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.nav-links a:hover:after {
   color: var(--primaryColor);
+  width: 100%;
+  left: 0;
 }
-.logo {
+
+*/ .logo {
   width: 20rem;
 }
 /* 
@@ -190,11 +207,14 @@ About
   width: var(--smallWidth);
   max-width: var(--maxWidth);
   margin: 0 auto;
+  color: var(--mainWhite);
 }
 .about-section p {
   line-height: 2rem;
   font-weight: 400;
   letter-spacing: 2px;
+  color: var(--mainWhite);
+  font-weight: 200;
 }
 /* 
 ====== 
@@ -225,6 +245,7 @@ Cocktails List
   text-align: center;
   margin-bottom: 3.5rem;
   margin-top: 1rem;
+  color: var(--mainWhite);
 }
 .cocktails-center {
   width: var(--smallWidth);
@@ -303,9 +324,10 @@ Form
 .form-control label {
   display: block;
   margin-bottom: 1.25rem;
-  font-weight: bold;
+  font-weight: 300;
   letter-spacing: 0.25rem;
   color: var(--primaryColor);
+  text-align: center;
 }
 .form-control input {
   width: 100%;
@@ -315,6 +337,7 @@ Form
   border-radius: var(--mainBorderRadius);
   padding: 0.5rem;
   font-size: 1.2rem;
+  color: var(--offWhite);
 }
 /* 
 ====== 
@@ -351,6 +374,16 @@ Cocktail
 .drink-info {
   padding-top: 2rem;
 }
+
+.drink-info span {
+  font-weight: bolder;
+}
+
+.drink-info p {
+  color: var(--mainWhite);
+  font-weight: lighter;
+}
+
 @media screen and (min-width: 992px) {
   .drink {
     display: grid;
@@ -372,7 +405,7 @@ Cocktail
   height: 4em;
 }
 .loader {
-  color: var(--primaryColor);
+  color: var(--mainWhite);
   text-indent: -9999em;
   margin: 88px auto;
   margin-top: 20rem;
