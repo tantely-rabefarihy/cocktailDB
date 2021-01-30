@@ -196,6 +196,17 @@ Navbar
 */ .logo {
   width: 20rem;
 }
+
+@media screen and (max-width: 576px) {
+  .logo {
+    font-size: 0.8rem;
+  }
+
+  .nav-links {
+    font-size: inherit;
+  }
+}
+
 /* 
 ====== 
 About
