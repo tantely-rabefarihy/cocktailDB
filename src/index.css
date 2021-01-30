@@ -193,16 +193,17 @@ Navbar
   left: 0;
 }
 
-*/ .logo {
-  width: 20rem;
+.logo {
+  width: 15rem;
 }
 
 @media screen and (max-width: 576px) {
   .logo {
-    font-size: 0.8rem;
+    font-size: 1rem;
+    width: 10rem;
   }
 
-  .nav-links {
+  .nav-links a {
     font-size: inherit;
   }
 }
