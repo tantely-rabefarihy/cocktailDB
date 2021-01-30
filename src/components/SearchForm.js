@@ -26,7 +26,7 @@ const SearchForm = () => {
             ref={searchValue}
             id="name"
             type="text"
-            onChange={searchCocktail}
+            onChange={() => searchCocktail()}
           />
         </div>
       </form>
